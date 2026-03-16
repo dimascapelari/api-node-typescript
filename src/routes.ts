@@ -15,7 +15,6 @@ import { EditProductController } from "./controllers/product/EditProductControll
 import { ListProductByCategoryController } from "./controllers/product/ListProductByCategoryController";
 import { ListProductsController } from "./controllers/product/ListProductsController";
 import { RemoveProductController } from "./controllers/product/RemoveProductController";
-import { SaleProductController } from "./controllers/sale/SaleProductController";
 
 const router = Router();
 const upload = multer(uploaderConfig.upload("./tmp"));
@@ -24,13 +23,13 @@ router.get("/test", (request: Request, response: Response) => {
   return response.json({ ok: true });
 });
 
-// ------------------------- User Routes -------------------------
+// User Routes
 router.post("/user", new CreteUserController().handle);
 router.post("/session", new AuthUserController().handle);
 router.get("/me", isAuthenticated, new DetailUserController().handle);
 router.delete("/user/remove", new RemoveUserController().handle);
 
-// ------------------------- Category Routes -------------------------
+// Category Routes
 router.post(
   "/category",
   isAuthenticated,
@@ -52,7 +51,7 @@ router.delete(
   new RemoveCategoryController().handle,
 );
 
-// ------------------------- Products Routes -------------------------
+// Products Routes
 
 // Criar Produto
 router.post(
@@ -85,15 +84,6 @@ router.delete(
   "/product/remove",
   isAuthenticated,
   new RemoveProductController().handle,
-);
-
-// ------------------------- Sale Routes -------------------------
-
-// Vender Produto
-router.put(
-  "/sale/product",
-  isAuthenticated,
-  new SaleProductController().handle,
 );
 
 export { router };
