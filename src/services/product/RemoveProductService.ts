@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { RemoveProductRequest } from "../../models/interfaces/product/RemoveProductRequest";
+import { RemoveProductRequest } from "../../models/interfaces/product";
 
 class RemoveProductService {
   async execute({ product_id }: RemoveProductRequest) {

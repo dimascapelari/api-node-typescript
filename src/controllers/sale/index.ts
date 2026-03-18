@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { SaleProductService } from "../../services/sale/SaleProductService";
-import { SaleProductRequest } from "../../models/interfaces/sale/SaleProductRequest";
+import { SaleProductService } from "../../services/sale";
+import { SaleProductRequest } from "../../models/interfaces/sale";
 
 class SaleProductController {
   async handle(request: Request, response: Response) {

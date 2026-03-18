@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { EditProductRequest } from "../../models/interfaces/product/EditProductRequest";
+import { EditProductRequest } from "../../models/interfaces/product";
 
 class EditProductService {
   async execute({

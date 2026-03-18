@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { CategoryRequest } from "../../models/interfaces/category/CategoryRequest";
+import { CategoryRequest } from "../../models/interfaces/category";
 
 class CreateCategoryService {
   async execute({ name }: CategoryRequest) {

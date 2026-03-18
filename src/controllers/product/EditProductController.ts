@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { EditProductRequest } from "../../models/interfaces/product/EditProductRequest";
-import { EditProductService } from "../../services/product/EditProductService";
+import { EditProductRequest } from "../../models/interfaces/product";
+import { EditProductService } from "../../services/product";
 
 class EditProductController {
   async handle(request: Request, response: Response) {

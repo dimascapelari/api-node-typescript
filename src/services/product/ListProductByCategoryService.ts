@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { ListProductByCategoryIdRequest } from "../../models/interfaces/product/ListProductByCategoryIdRequest";
+import { ListProductByCategoryIdRequest } from "../../models/interfaces/product";
 
 class ListProductByCategoryService {
   async execute({ category_id }: ListProductByCategoryIdRequest) {

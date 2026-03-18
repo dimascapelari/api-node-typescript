@@ -1,21 +1,27 @@
 import { Router, Request, Response } from "express";
 import multer from "multer";
 import uploaderConfig from "./config/multer";
-import { CreteUserController } from "./controllers/user/CreateUserController";
-import { AuthUserController } from "./controllers/user/AuthUserController";
 import { isAuthenticated } from "./middlewares/isAuthenticated";
-import { DetailUserController } from "./controllers/user/DetailUserController";
-import { RemoveUserController } from "./controllers/user/RemoveUserController";
-import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
-import { EditCategoryController } from "./controllers/category/EditCategoryController";
-import { ListCategoryController } from "./controllers/category/ListCategoryController";
-import { RemoveCategoryController } from "./controllers/category/RemoveCategoryController";
-import { CreateProductController } from "./controllers/product/CreateProductController";
-import { EditProductController } from "./controllers/product/EditProductController";
-import { ListProductByCategoryController } from "./controllers/product/ListProductByCategoryController";
-import { ListProductsController } from "./controllers/product/ListProductsController";
-import { RemoveProductController } from "./controllers/product/RemoveProductController";
-import { SaleProductController } from "./controllers/sale/SaleProductController";
+import {
+  AuthUserController,
+  CreteUserController,
+  DetailUserController,
+  RemoveUserController,
+} from "./controllers/user";
+import {
+  CreateCategoryController,
+  EditCategoryController,
+  ListCategoryController,
+  RemoveCategoryController,
+} from "./controllers/category";
+import {
+  CreateProductController,
+  EditProductController,
+  ListProductByCategoryController,
+  ListProductsController,
+  RemoveProductController,
+} from "./controllers/product";
+import { SaleProductController } from "./controllers/sale";
 
 const router = Router();
 const upload = multer(uploaderConfig.upload("./tmp"));

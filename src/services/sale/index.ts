@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { SaleProductRequest } from "../../models/interfaces/sale/SaleProductRequest";
+import { SaleProductRequest } from "../../models/interfaces/sale";
 
 class SaleProductService {
   async execute({ product_id, amount }: SaleProductRequest) {

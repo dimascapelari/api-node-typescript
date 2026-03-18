@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { CategoryRequest } from "../../models/interfaces/category/CategoryRequest";
-import { CreateCategoryService } from "../../services/category/CreateCategoryService";
+import { CategoryRequest } from "../../models/interfaces/category";
+import { CreateCategoryService } from "../../services/category";
 
 class CreateCategoryController {
   async handle(request: Request, response: Response) {

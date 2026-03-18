@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { CreateUserService } from "../../services/user/CreateUserService";
-import { UserRequest } from "../../models/interfaces/user/UserRequest";
+import { CreateUserService } from "../../services/user";
+import { UserRequest } from "../../models/interfaces/user";
 
 class CreteUserController {
   async handle(request: Request, response: Response) {

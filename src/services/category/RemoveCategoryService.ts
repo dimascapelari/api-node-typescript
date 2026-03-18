@@ -1,5 +1,5 @@
 import prismaClient from "../../prisma";
-import { RemoveCategoryRequest } from "../../models/interfaces/category/RemoveCategoryRequest";
+import { RemoveCategoryRequest } from "../../models/interfaces/category";
 
 class RemoveCategoryService {
   async execute({ category_id }: RemoveCategoryRequest) {

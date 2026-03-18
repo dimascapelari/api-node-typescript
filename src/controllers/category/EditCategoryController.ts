@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { EditCategoryService } from "../../services/category/EditiCategoryService";
+import { EditCategoryService } from "../../services/category";
 
 class EditCategoryController {
   async handle(request: Request, response: Response) {
